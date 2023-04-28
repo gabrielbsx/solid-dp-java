@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.OptionalInt;
 import java.util.stream.IntStream;
+import java.util.Optional;
 
 public class UsuarioRepositorioMemoriaImpl extends RepositorioMemoria<Usuario>
 {
@@ -27,5 +28,15 @@ public class UsuarioRepositorioMemoriaImpl extends RepositorioMemoria<Usuario>
             throw new Error("Usuário não encontrado!");
         }
         usuarios.set(index.getAsInt(), u);
+    }
+    
+    public Optional<Usuario> procurarPeloNome(String nome)
+    {
+        Optional<Usuario> usuario = usuarios
+            .stream()
+            .filter(u -> u.getNome().equals(nome))
+            .findFirst();
+        
+        return usuario;
     }
 }
