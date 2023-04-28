@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=RepositorioMemoria
-comment1.params=
-comment1.target=RepositorioMemoria()
-comment2.params=data
-comment2.target=void\ criar(java.lang.Object)
-numComments=3
