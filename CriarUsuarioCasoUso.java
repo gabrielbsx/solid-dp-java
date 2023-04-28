@@ -7,7 +7,7 @@ public class CriarUsuarioCasoUso
         repositorio = r;
     }
     
-    public void executar(String nome)
+    public void executar(String nome) throws Exception 
     {
         validarNome(nome);
         UsuarioGenerico u = new UsuarioGenerico();
@@ -15,10 +15,10 @@ public class CriarUsuarioCasoUso
         repositorio.criar(u);
     }
     
-    protected void validarNome(String nome) throws Error
+    protected void validarNome(String nome) throws Exception
     {
-        if (nome.equals("Jovem")) {
-            throw new Error("Nome inválido!");
+        if (nome.equals("Erro")) {
+            throw new Exception("Nome inválido!");
         }
     }
 }
