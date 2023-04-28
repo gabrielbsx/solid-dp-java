@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=UsuarioRepositorioMemoriaImpl
+comment1.params=
+comment1.target=UsuarioRepositorioMemoriaImpl()
+comment2.params=u
+comment2.target=void\ criar(Usuario)
+comment3.params=id\ u
+comment3.target=void\ atualizar(java.lang.String,\ Usuario)
+numComments=4
