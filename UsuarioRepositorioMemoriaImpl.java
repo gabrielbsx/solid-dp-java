@@ -5,10 +5,13 @@ import java.util.Optional;
 
 public class UsuarioRepositorioMemoriaImpl extends RepositorioMemoria<Usuario>
 {
-    private ArrayList<Usuario> usuarios = new ArrayList<>();
+    private static ArrayList<Usuario> usuarios;
     
     public UsuarioRepositorioMemoriaImpl()
     {
+        if (usuarios == null) {
+            usuarios = new ArrayList<>();
+        }
     }
     
     public void criar(Usuario u)
