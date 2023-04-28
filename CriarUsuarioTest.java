@@ -7,12 +7,12 @@ import static org.junit.Assert.assertTrue;
 public class CriarUsuarioTest
 {
     private CriarUsuarioCasoUso criarUsuarioCasoUso;
-    private UsuarioRepositorioMemoriaImpl usuarioRepositorioMemoriaImpl;
+    private UsuarioRepositorioMemoria usuarioRepositorioMemoria;
     
     public CriarUsuarioTest()
     {
-        usuarioRepositorioMemoriaImpl = new UsuarioRepositorioMemoriaImpl();
-        criarUsuarioCasoUso = new CriarUsuarioCasoUso(usuarioRepositorioMemoriaImpl);
+        usuarioRepositorioMemoria = new UsuarioRepositorioMemoria();
+        criarUsuarioCasoUso = new CriarUsuarioCasoUso(usuarioRepositorioMemoria);
     }
 
     @BeforeEach
@@ -32,7 +32,7 @@ public class CriarUsuarioTest
             String nome = "Jovem Mestre";
             criarUsuarioCasoUso.executar(nome);
             assertTrue(
-                usuarioRepositorioMemoriaImpl
+                usuarioRepositorioMemoria
                     .procurarPeloNome(nome)
                     .isPresent()
             );
